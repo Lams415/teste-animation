@@ -72,12 +72,66 @@ body {
 .categoriwrapper button > span > span::after {
     content: '';
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 50%;
     width: 20px;
     height: 0;
     border: 1px solid white;
     border-left: none;
-    border-bottom: none;
+    border-top: none;
     transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
 }
+.categoriwrapper:hover button > span > span::after {
+    width: calc(50% - 1px);
+    height: calc(100% - 2px);
+    transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+}
+.categoriwrapper button > span > span::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 20px;
+    height: 0;
+    border: 1px solid white;
+    border-right: none;
+    border-top: none;
+    transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
+}
+.categoriwrapper:hover button > span > span::before {
+    width: calc(50% - 1px);
+    height: calc(100% - 2px);
+    transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+    
+}.categoriwrapper button > span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0%;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+ .categoriwrapper:hover button > span::before {
+    opacity: 1;
+    border-top: 1px solid white;
+    width: calc(50%);
+    height: 1px;
+    transition: opacity 0s ease-out 0.29s, width 0.15s ease-out 0.3s;
+ }
+ .categoriwrapper button > span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+ }
+ .categoriwrapper:hover button > span::after {
+    opacity: 1;
+    border-top: 1px solid white;
+    width: calc(50%);
+    height: 1px;
+    transition: opacity 0s ease-out 0.29s, width 0.15s ease-out 0.3s;
+ }
